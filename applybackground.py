@@ -13,9 +13,9 @@ def set_wallpaper(image_path):
     try:
         result = ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 3)
         if result:
-            print("Desktop background successfully changed.")
+            print("Task completed.")
         else:
-            print("Failed to change desktop background.")
+            print("Task failed.")
     except Exception as e:
         print(f"Error setting background: {e}")
 
